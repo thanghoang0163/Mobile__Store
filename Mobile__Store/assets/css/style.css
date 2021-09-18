@@ -126,6 +126,7 @@
   overflow: hidden;
   display: none;
   padding: 0;
+  animation: fadeIn linear 0.1s;
 }
 
 .header__location-choose-hcm {
