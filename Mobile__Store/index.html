@@ -7,15 +7,74 @@
         <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="./assets/css/base.css">
-        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-        <title>F8-Shop</title>
+        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+        <title>Mobile__Store</title>
     </head>
     <body>
         <div class="mobile-store">
             <header id="header">
+                <div class="grid header__grid">
+                    <!-- Header Logo -->
+                    <div class="header__logo">
+                        <img class="header__logo-img" src="./assets/images/mobile__store.png" alt="Mobile Store">
+                    </div>
 
+                    <!-- Header Call -->
+                    <div class="header__call">
+                        <div class="header__call-logo">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="header__call-info">
+                            <a href="#" class="header__call-info-phone-number">0123.456.789</a>
+                            <p class="header__call-info-text">Tổng đài tư vấn</p>
+                        </div>
+                    </div>
+
+                    <!-- Header Search -->
+                    <div class="header__search">
+                        <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                        <a href="" class="header__search-icon">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+
+                    <!-- Header Location -->
+                    <div class="header__location">
+                        <span class="header__location-text">Chọn khu vực</span>
+                        <div class="header__location-choose">
+                            <a href="" class="header__location-choose-hn">
+                                Hà Nội
+                            </a>
+                            <div class="header__location-icon">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                        <ul class="header__location-modal">
+                            <li class="header__location-choose-hcm">
+                                    Tp.Hồ Chí Minh
+                            </li>
+                            <li class="header__location-choose-hcm">
+                                Đà Nẵng
+                            </li>
+                            <li class="header__location-choose-hcm">
+                                Cần Thơ
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Header Cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-icon">
+                            <i class="fas fa-cart-plus"></i>
+                        </div>
+                        <div class="header__cart-text">Giỏ hàng</div>
+                    </div>
+                </div>
             </header>
     
             <div id="body">
