@@ -4,12 +4,6 @@
   --black-color: #000;
   --text-color: #333;
   --border-color: #dbdbdb;
-
-  --navbar-height: ;
-  --header-height: ;
-  --header-with-search-height: calc(
-    var(--header-height) - var(--navbar-height)
-  );
 }
 
 * {
@@ -45,6 +39,12 @@ html {
   padding-left: 5px;
   padding-right: 5px;
   width: 16.6667%;
+}
+
+.grid__column-2-4 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 20%;
 }
 
 .grid__column-footer {

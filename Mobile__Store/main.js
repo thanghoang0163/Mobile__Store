@@ -4,7 +4,6 @@ var $$ = document.querySelectorAll.bind(document)
 
 var locationSelect = $('.header__location-select-primary')
 var locationItem = $$('.header__location-modal-select')
-var locationModal = $('.header__location-modal')
 
 function getLocation() {
     for(var i = 0; i < locationItem.length; i++) {
