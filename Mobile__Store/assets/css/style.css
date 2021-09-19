@@ -95,14 +95,14 @@
   font-size: 1.1rem;
 }
 
-.header__location-choose {
+.header__location-select {
   display: flex;
   cursor: pointer;
   /* width: 100%; */
   align-items: center;
 }
 
-.header__location-choose-hn {
+.header__location-select-primary {
   text-decoration: none;
   font-size: 1.3rem;
   margin: 0 1rem;
@@ -127,9 +127,10 @@
   display: none;
   padding: 0;
   animation: fadeIn linear 0.1s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.header__location-choose-hcm {
+.header__location-modal-select {
   text-decoration: none;
   font-size: 1.3rem;
   width: 80%;
@@ -178,4 +179,52 @@
 
 .header__cart:hover {
   background-color: rgb(33, 137, 206);
+}
+
+/* Footer */
+#footer {
+  background-color: #a19f9f;
+  width: 100%;
+  /* height: 10rem; */
+}
+
+.footer-heading {
+  text-transform: uppercase;
+}
+
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-list__item {
+  margin: 0.8rem 0;
+}
+
+.footer-list__item a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--white-color);
+}
+
+.footer-list__item a:hover {
+  color: var(--primary-color);
+}
+
+.footer-list__item span {
+  display: block;
+}
+
+.footer-list__item-text {
+  font-size: 1.4rem;
+}
+
+.footer-list__item-phone-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2980b9;
+}
+
+.footer-list__item-time {
+  font-size: 1.2rem;
 }
