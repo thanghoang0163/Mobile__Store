@@ -127,7 +127,7 @@
   display: none;
   padding: 0;
   animation: fadeIn linear 0.1s;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 .header__location-modal-select {
@@ -314,6 +314,7 @@
   height: 3.4rem;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .body__hot-product-text {
@@ -394,4 +395,17 @@
 
 .grid__column-footer h2 {
   margin-top: 2rem;
+}
+
+/* Banner */
+.body__banner {
+  box-shadow: 0 0.15rem 0.2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 41rem;
+}
+
+.body__banner-img {
+  background-size: cover;
+  width: 100%;
 }
