@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
     const dotItems = $$('.slider__dot-item')
     const sliderItemWidth = sliderItems[0].offsetWidth;
     const sliderLength = sliderItems.length;
-    const sliderInfo = $$('.slider-footer__info-item');
+    const sliderInfoItems = $$('.slider-footer__info-item');
 
     let positionX = 0;
     let index = 0;
@@ -43,6 +43,15 @@ window.addEventListener('load', function() {
         e.target.classList.add('active');
         const slideIndex = parseInt(e.target.dataset.index);
         index = slideIndex;
+        positionX = -1 * index * sliderItemWidth;
+        sliderMain.style = `transform: translateX(${positionX}px)`;
+    }));
+
+    [...sliderInfoItems].forEach((item) => item.addEventListener('click', function(e) {
+        [...sliderInfoItems].forEach((el) => el.classList.remove('border--actived'));
+        e.target.classList.add('border--actived');
+        const sliderIndex = parseInt(e.target.dataset.index);
+        index = sliderIndex;
         positionX = -1 * index * sliderItemWidth;
         sliderMain.style = `transform: translateX(${positionX}px)`;
     }));
@@ -70,8 +79,8 @@ window.addEventListener('load', function() {
         [...dotItems].forEach((el) => el.classList.remove('active'));
         dotItems[index].classList.add('active');
 
-        [...sliderInfo].forEach((el) => el.classList.remove('border--actived'));
-        sliderInfo[index].classList.add('border--actived');
+        [...sliderInfoItems].forEach((el) => el.classList.remove('border--actived'));
+        sliderInfoItems[index].classList.add('border--actived');
         
     }
 })
