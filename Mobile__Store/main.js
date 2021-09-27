@@ -89,10 +89,10 @@ window.addEventListener('load', function() {
 window.addEventListener('load', function() {
     const slider3 = $('.slider-3');
     const sliderMain3 = $('.slider-3-main');
-    const prevBtn3 = $('.slider-3-prev');
-    const nextBtn3 = $('.slider-3-next');
+    const prevBtn3 = $('.slider-3-prev-btn');
+    const nextBtn3 = $('.slider-3-next-btn');
     const sliderItems3 = $$('.slider-3-item');
-    const sliderItemWidth3 = sliderItems3[0].outerWidth;
+    const sliderItemWidth3 = sliderItems3[0].offsetWidth;
     const sliderLength3 = sliderItems3.length;
 
     let positionX = 0;
@@ -100,20 +100,23 @@ window.addEventListener('load', function() {
 
     nextBtn3.addEventListener('click', function() {
         handleChangeSlide(1);
+        console.log(index);
+        
     });
     prevBtn3.addEventListener('click', function() {
         handleChangeSlide(-1);
+        console.log(index);
     });
 
     function handleChangeSlide(direction) {
         if(direction === 1) {
             index++;
-            if(index >= sliderLength3) {
-                index = sliderLength3 - 1;
+            if(index > sliderLength3 - 3) {
+                index = sliderLength3 - 3;
                 return;
             }
-            positionX -= sliderItemWidth3;
-            sliderMain3.style = `transform: translateX(${positionX}px + 20px)`;
+            positionX -= sliderItemWidth3 + 20;
+            sliderMain3.style = `transform: translateX(${positionX}px)`;
         } 
         else if(direction === -1) {
             index--;
@@ -121,8 +124,8 @@ window.addEventListener('load', function() {
                 index = 0;
                 return;
             }
-            positionX +=sliderItemWidth3;
-            sliderMain3.style = `transform: translateX(${positionX}px + 20px)`;
+            positionX += sliderItemWidth3 + 20;
+            sliderMain3.style = `transform: translateX(${positionX}px)`;
         }
     }
 })
