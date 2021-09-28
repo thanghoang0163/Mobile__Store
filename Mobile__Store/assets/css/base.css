@@ -59,6 +59,95 @@ html {
   width: 83.3334%;
 }
 
+/* Category */
+.category {
+  margin-top: 1rem;
+}
+.category-header {
+  width: 100%;
+  height: 6rem;
+  background-image: linear-gradient(to top, var(--primary-color), #7fbee7);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.category-list {
+  width: 100%;
+  height: 40rem;
+  margin: 0;
+  padding: 0;
+  border-left: 0.7rem solid var(--primary-color);
+  border-right: 0.7rem solid var(--primary-color);
+  border-bottom: 0.7rem solid var(--primary-color);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  display: flex;
+  background-color: var(--white-color);
+}
+
+.category-item {
+  list-style: none;
+  width: calc(1186px / 5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-img {
+  margin: 3rem 2rem 1rem;
+  transition: transform 0.25s linear;
+}
+
+.category-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.category-name {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.category-new-price {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0.2rem 0;
+}
+
+.category-new-price span {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.category-old-price {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.category-old-price span {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.category-item:hover {
+  box-shadow: 0 0 0.6rem 0.1rem #999;
+  cursor: pointer;
+}
+
+.category-item:hover .category-img {
+  transform: translateY(-10%);
+}
+
 /* Amination */
 @keyframes fadeIn {
   from {

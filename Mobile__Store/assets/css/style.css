@@ -349,6 +349,7 @@
 .slider {
   position: relative;
   max-width: 100rem;
+  /* transition: all 0.25s linear; */
 }
 
 .slider__prev-btn,
@@ -374,11 +375,11 @@
 }
 
 .slider__next-btn {
-  right: 1rem;
+  right: 0.1rem;
 }
 
 .slider__prev-btn {
-  left: 1rem;
+  left: 0.1rem;
 }
 
 /* .slider:hover .slider__next-btn,
@@ -448,13 +449,14 @@
   width: 100%;
   flex: 1 0 100%;
   user-select: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .slider__item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0.5rem;
 }
 
 /* Slider Footer Info */
@@ -621,4 +623,5 @@
 /* Footer Banner */
 .footer-banner {
   margin-top: 1rem;
+  padding-bottom: 1rem;
 }
