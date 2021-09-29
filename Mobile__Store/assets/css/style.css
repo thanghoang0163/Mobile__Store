@@ -620,6 +620,103 @@
   z-index: 1;
 }
 
+/* Special Page */
+.special-page {
+  margin-top: 1rem;
+}
+
+.special-page__header {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.special-page a {
+  display: inline-block;
+}
+
+.special-page img {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.special-page a:nth-of-type(2) {
+  margin: 0 1.25rem;
+}
+
+/* New Products */
+.new-product {
+  margin-top: 1rem;
+}
+
+.new-product__header {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.new-product-samsung {
+  display: inline-block;
+  width: 39rem;
+  height: 21rem;
+  border-radius: 0.5rem;
+  position: relative;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.new-product-samsung:nth-child(2) {
+  background-image: url(../images/mini-banner-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.new-product-samsung:nth-child(3) {
+  background-image: url(../images/mini-banner-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 1.25rem;
+}
+
+.new-product-samsung:last-child {
+  background-image: url(../images/mini-banner-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.new-product-img {
+  border-radius: 0.5rem;
+}
+
+.view-product-btn {
+  width: 8rem;
+  height: 3rem;
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2.5rem;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1rem;
+  z-index: 2;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.view-product-btn:hover {
+  background-color: rgb(231, 230, 230);
+}
+
+.new-products-samsung:nth-child(3) {
+  margin: 0 1.25rem;
+}
+
 /* Footer Banner */
 .footer-banner {
   margin-top: 1rem;
