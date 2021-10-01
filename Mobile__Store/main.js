@@ -45,6 +45,9 @@ window.addEventListener('load', function() {
         index = slideIndex;
         positionX = -1 * index * sliderItemWidth;
         sliderMain.style = `transform: translateX(${positionX}px)`;
+
+        [...sliderInfoItems].forEach((el) => el.classList.remove('border--actived'));
+        sliderInfoItems[index].classList.add('border--actived');
     }));
 
     [...sliderInfoItems].forEach((item) => item.addEventListener('click', function(e) {
@@ -54,6 +57,9 @@ window.addEventListener('load', function() {
         index = sliderIndex;
         positionX = -1 * index * sliderItemWidth;
         sliderMain.style = `transform: translateX(${positionX}px)`;
+
+        [...dotItems].forEach((el) => el.classList.remove('active'));
+        dotItems[index].classList.add('active');
     }));
 
     function handleChangeSlide(direction) {
