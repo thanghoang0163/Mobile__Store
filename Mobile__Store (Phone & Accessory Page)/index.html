@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+        <title>Mobile Store</title>
+    </head>
+    <body>
+        <div class="mobile-store">
+            <header id="header">
+                <div class="grid header__grid">
+                    <!-- Header Logo -->
+                    <div class="header__logo">
+                        <img class="header__logo-img" src="./assets/images/mobile__store.png" alt="Mobile Store">
+                    </div>
+
+                    <!-- Header Call -->
+                    <div class="header__call">
+                        <div class="header__call-logo">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="header__call-info">
+                            <a href="#" class="header__call-info-phone-number">0123.456.789</a>
+                            <p class="header__call-info-text">Tổng đài tư vấn</p>
+                        </div>
+                    </div>
+
+                    <!-- Header Search -->
+                    <div class="header__search">
+                        <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                        <a href="" class="header__search-icon">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+
+                    <!-- Header Location -->
+                    <div class="header__location">
+                        <span class="header__location-text">Chọn khu vực</span>
+                        <div class="header__location-select">
+                            <a href="" class="header__location-select-primary">
+                                Hà Nội
+                            </a>
+                            <div class="header__location-icon">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                        <ul class="header__location-modal">
+                            <li class="header__location-modal-select">
+                                Hà Nội
+                            </li>
+                            <li class="header__location-modal-select">
+                                Hồ Chí Minh
+                            </li>
+                            <li class="header__location-modal-select">
+                                Đà Nẵng
+                            </li>
+                            <li class="header__location-modal-select">
+                                Cần Thơ
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Header Cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-icon">
+                            <i class="fas fa-cart-plus"></i>
+                        </div>
+                        <div class="header__cart-text">Giỏ hàng</div>
+                    </div>
+                </div>
+            </header>
+    
+            <div id="body">
+                <!-- Mobile Page -->
+                <div class="mobile-page">
+                    <!-- Header -->
+                    <div class="mobile-page-header">
+                        <a href="http://127.0.0.1:5502/index.html" class="home-page-back">Trang chủ</a>
+                        <button class="mobile-page-btn">
+                            Điện thoại
+                        </button>
+                        <button class="accessory-page-btn">
+                            Phụ kiện
+                        </button>
+                    </div>
+
+
+                    <div class="grid grid--padding">
+                        <!-- Mobile Page Header -->
+                            <div class="header-img">
+                                <img src="https://cdn.tgdd.vn/2021/12/banner/1200-44-1200x44-2.png" alt="header image">
+                            </div>
+
+                       <!-- Brand Category -->
+                       <div class="brand-category">
+                        <button class="all-mobile-btn brand-btn bordered">
+                            Tất cả
+                        </button>
+                        <button class="iphone-btn brand-btn" data-brand="iphone">
+                            <img src="https://cdn.tgdd.vn/Brand/1/logo-iphone-220x48.png" alt="iphone" class="brand-img">
+                        </button>
+                        <button class="xiaomi-btn brand-btn" data-brand="xiaomi">
+                            <img src="https://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png" alt="xiaomi" class="brand-img">
+                        </button>
+                        <button class="samsung-btn brand-btn" data-brand="samsung">
+                            <img src="https://cdn.tgdd.vn/Brand/1/samsungnew-220x48-1.png" alt="samsung" class="brand-img">
+                        </button>
+                        <button class="vivo-btn brand-btn" data-brand="vivo">
+                            <img src="https://cdn.tgdd.vn/Brand/1/Vivo42-b_50.jpg" alt="vivo" class="brand-img">
+                        </button>
+                        <button class="oppo-btn brand-btn" data-brand="oppo">
+                            <img src="https://cdn.tgdd.vn/Brand/1/OPPO42-b_5.jpg" alt="oppo" class="brand-img">
+                        </button>
+                        <button class="oneplus-btn brand-btn" data-brand="oneplus">
+                            <img src="https://www.xtmobile.vn/vnt_upload/product/category/oneplus.jpg" alt="oneplus" class="brand-img">
+                        </button>
+                        <button class="realme-btn brand-btn" data-brand="realme">
+                            <img src="https://cdn.tgdd.vn/Brand/1/Realme42-b_37.png" alt="realme" class="brand-img">
+                        </button>
+                        <button class="vsmart-btn brand-btn" data-brand="vsmart">
+                            <img src="https://cellphones.com.vn/media/icons/brands/brand-vsmart.svg" alt="vsmart" class="brand-img">
+                        </button>
+                        <button class="nokia-btn brand-btn" data-brand="nokia">
+                            <img src="https://cdn.tgdd.vn/Brand/1/Nokia42-b_21.jpg" alt="nokia" class="brand-img">
+                        </button>
+                       </div>
+                       
+                       <!-- Mobile List -->
+                       <div class="grid__row">
+                           <ul class="mobile-list">
+                               <!-- <li class="mobile-item">
+                                <div class="mobile-item-img">
+                                    <img src="https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/9df78eab33525d08d6e5fb8d27136e95/y/e/yellow_final_2.jpg" alt="">
+                                </div>
+                                <div class="mobile-item-name">
+                                    <span>Samsung Galaxy Note 20 Ultra 5G</span>
+                                </div>
+                                <div class="mobile-item-specs">
+                                    <div class="mobile-item-specs__screen-size">12:9</div>
+                                    <div class="mobile-item-specs__ram">12 GB</div>
+                                    <div class="mobile-item-specs__rom">256 GB</div>
+                                </div>
+                                <div class="mobile-item-price">
+                                    <div class="mobile-item-new-price">
+                                        <span>21,000,000</span> d
+                                    </div>
+                                    <div class="mobile-item-old-price">
+                                        <span>30,000,000</span> d
+                                    </div>
+                                </div> -->
+
+                                <!-- Sale Off -->
+                                <!-- <div class="mobile-item__sale-off">
+                                    Giảm <span>20%</span>
+                                </div>
+                               </li> -->
+                           </ul>
+                       </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <footer id="footer">
+                <div class="grid">
+                    <div class="grid__row">
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Hỗ trợ khách hàng</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <a href="">Mua hàng trả góp</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Hướng dẫn mua hàng online</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Bảo hành mở rộng</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Chính sách bảo hành</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Chính sách đổi trả</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Quy định hình thức thanh toán</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Giới thiệu</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <a href="">Về Di Động TWin</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Tuyển dụng</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Khuyến mãi</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Liên hệ</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Hỏi đáp</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Tra cứu bảo hành</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Tổng đài hỗ trợ</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Tư vấn mua hàng (miễn phí):</span>
+                                    <span class="footer-list__item-phone-number">1800.6228</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Hỗ trợ kĩ thuật:</span>
+                                    <span class="footer-list__item-phone-number">1900.2044</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Khiếu nại - góp ý:</span>
+                                    <span class="footer-list__item-phone-number">1800.8098</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <div class="btn-up-to-header">
+                <a href="#header" class="btn-up-to-header-click">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+            </div>
+
+            <script src="./main.js"></script>
+        </div>
+        
+    </body>

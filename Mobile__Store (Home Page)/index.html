@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+        <title>Mobile Store</title>
+    </head>
+    <body>
+        <div class="mobile-store">
+            <header id="header">
+                <div class="grid header__grid">
+                    <!-- Header Logo -->
+                    <div class="header__logo">
+                        <img class="header__logo-img" src="./assets/images/mobile__store.png" alt="Mobile Store">
+                    </div>
+
+                    <!-- Header Call -->
+                    <div class="header__call">
+                        <div class="header__call-logo">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="header__call-info">
+                            <a href="#" class="header__call-info-phone-number">0123.456.789</a>
+                            <p class="header__call-info-text">Tổng đài tư vấn</p>
+                        </div>
+                    </div>
+
+                    <!-- Header Search -->
+                    <div class="header__search">
+                        <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                        <a href="" class="header__search-icon">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+
+                    <!-- Header Location -->
+                    <div class="header__location">
+                        <span class="header__location-text">Chọn khu vực</span>
+                        <div class="header__location-select">
+                            <a href="" class="header__location-select-primary">
+                                Hà Nội
+                            </a>
+                            <div class="header__location-icon">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                        <ul class="header__location-modal">
+                            <li class="header__location-modal-select">
+                                Hà Nội
+                            </li>
+                            <li class="header__location-modal-select">
+                                Hồ Chí Minh
+                            </li>
+                            <li class="header__location-modal-select">
+                                Đà Nẵng
+                            </li>
+                            <li class="header__location-modal-select">
+                                Cần Thơ
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Header Cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-icon">
+                            <i class="fas fa-cart-plus"></i>
+                        </div>
+                        <div class="header__cart-text">Giỏ hàng</div>
+                    </div>
+                </div>
+            </header>
+    
+            <div id="body">
+                <!-- Home Page -->
+                <div class="home-page">
+                    <div class="grid grid--padding">
+                        <div class="grid__row">
+                            <!-- Sidebar -->
+                            <div class="grid__column-2">
+                                <div class="body__sidebar">
+                                    <div class="body__sidebar-header">
+                                        <div class="body__sidebar-header-icon">
+                                            <i class="far fa-list-alt"></i>
+                                        </div>
+                                        <span class="body__sidebar-header-text">Danh mục sản phẩm</span>
+                                    </div>
+                                </div>
+    
+                                <ul class="body__sidebar-list">
+                                    <li class="body__sidebar-item">
+                                        <a href="http://127.0.0.1:5501/index.html">
+                                            <div class="body__sidebar-item-icon">
+                                                <i class="fas fa-mobile-alt"></i>
+                                            </div>
+                                            <span class="body__sidebar-item-text">Điện thoại</span>
+                                        </a>
+                                        <ul class="body__sidebar-phone-list">
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="http://127.0.0.1:5501/index.html">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    iPhone
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Xiaomi
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Sam Sung
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Vivo
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Oppo
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    One Plus
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Realme
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Vsmart
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Nokia
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="body__sidebar-item">
+                                        <a href="">
+                                            <div class="body__sidebar-item-icon">
+                                                <i class="fas fa-headphones"></i>
+                                            </div>
+                                            <span class="body__sidebar-item-text">Phụ kiện</span>
+                                        </a>
+                                        <ul class="body__sidebar-phone-list">
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Ốp lưng
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Sạc dự phòng
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Củ sạc
+                                                </a>
+                                            </li>
+                                            <li class="body__sidebar-phone-item">
+                                                <a href="">
+                                                    <i class="fas fa-caret-right"></i>
+                                                    Cáp sạc
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                            <!-- Body -->
+                            <div class="grid__column-10">
+                                <!-- Hot Product Bar -->
+                                <div class="body__hot-product">
+                                    <span class="body__hot-product-text">Sản phẩm hot</span>
+                                    <span class="body__hot-product-item">
+                                        <a href="" >iPhone 11</a>
+                                    </span>
+                                    <span class="body__hot-product-item">
+                                        <a href="" >iPhone 11 Pro Max</a>
+                                    </span>
+                                    <span class="body__hot-product-item">
+                                        <a href="" >iPhone 12</a>
+                                    </span>
+                                    <span class="body__hot-product-item">
+                                        <a href="" >iPhone 12 Pro Max</a>
+                                    </span>
+                                    <span class="body__hot-product-item">
+                                        <a href="" >iPhone 13</a>
+                                    </span>
+                                    <span class="body__hot-product-item">
+                                        <a href="" >iPhone 13 Pro Max</a>
+                                    </span>
+                                    <span class="body__hot-product-item">
+                                        <a href="" >iPhone Xs Max</a>
+                                    </span>
+                                    <span class="body__hot-product-item">
+                                        <a href="" >Galaxy Fold 3</a>
+                                    </span>
+                                </div>
+    
+                                <!-- Slider -->
+                                <div class="slider">
+                                    <i class="slider__prev-btn fa fa-angle-left btn--hover"></i>
+                                    <ul class="slider__dots">
+                                        <li class="slider__dot-item active" data-index="0"></li>
+                                        <li class="slider__dot-item" data-index="1"></li>
+                                        <li class="slider__dot-item" data-index="2"></li>
+                                        <li class="slider__dot-item" data-index="3"></li>
+                                        <li class="slider__dot-item" data-index="4"></li>
+                                    </ul>
+                                    <div class="slider__wrapper">
+                                        <div class="slider__main">
+                                            <div class="slider__item">
+                                                <img src="./assets/images/banner1.png" alt="Banner 1">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img src="./assets/images/banner2.png" alt="Banner 1">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img src="./assets/images/banner3.png" alt="Banner 1">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img src="./assets/images/banner4.png" alt="Banner 1">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img src="./assets/images/banner5.png" alt="Banner 1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="slider__next-btn fa fa-angle-right btn--hover"></i>
+    
+                                    <div class="slider-footer__info">
+                                        <div class="slider-footer__info-item border--actived" data-index="0">
+                                           Mua Z Fold 3 5G <br />
+                                           Giảm đến 4 triệu
+                                        </div>
+                                        <div class="slider-footer__info-item" data-index="1">
+                                           Galaxy S21+ 5G <br />
+                                           Giảm đến 10 triệu
+                                        </div>
+                                        <div class="slider-footer__info-item" data-index="2">
+                                           Xiaomi Mi 11 Lite 5G <br />
+                                           Chỉ còn 8 triệu
+                                        </div>
+                                        <div class="slider-footer__info-item" data-index="3">
+                                           Mua S20 PE 256GB <br />
+                                           Giá chỉ 11 triệu
+                                        </div>
+                                        <div class="slider-footer__info-item" data-index="4">
+                                           iPhone 12 Pro Max <br />
+                                           Giá từ 24.9 triệu
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Header Banner -->
+                        <div class="header-banner banner">
+                            <img class="header-banner-img banner-img" src="./assets/images/header-banner.png" alt="Header Banner">
+                        </div>
+    
+                        <!-- Mobile Category -->
+                        <div class="mobile-category category">
+                            <div class="mobile-category-header category-header">
+                                Danh mục điện thoại
+                            </div>
+    
+                            <ul class="mobile-category-list category-list">
+                                <!-- <li class="mobile-category-item category-item">
+                                    <div class="mobile-img category-img">
+                                        <img src="./assets/images/mobile/samsum galaxy z fold3 5g.jpg" alt="Galaxy S10 5G">
+                                    </div>
+                                    <div class="mobile-name category-name">
+                                        Samsung Galaxy Z Fold3 5G
+                                    </div>
+                                    <div class="mobile-new-price category-new-price">
+                                        <span>41.990.000</span>đ
+                                    </div>
+                                    <div class="mobile-old-price category-old-price">
+                                       <span>44.990.000</span>đ
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+    
+                        <!-- slider with 3 images -->
+                        <div class="slider-3">
+                            <i class="fa fa-angle-left slider-3-prev-btn"></i>
+                            <div class="slider-3-wapper">
+                                <div class="slider-3-main">
+                                    <div class="slider-3-item">
+                                        <img src="./assets/images/banner1.png" alt="Banner">
+                                    </div>
+                                    <div class="slider-3-item">
+                                        <img src="./assets/images/banner2.png" alt="Banner">
+                                    </div>
+                                    <div class="slider-3-item">
+                                        <img src="./assets/images/banner3.png" alt="Banner">
+                                    </div>
+                                    <div class="slider-3-item">
+                                        <img src="./assets/images/banner4.png" alt="Banner">
+                                    </div>
+                                    <div class="slider-3-item">
+                                        <img src="./assets/images/banner5.png" alt="Banner">
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa fa-angle-right slider-3-next-btn"></i>
+                        </div>
+    
+                        <!-- Accessory Category -->
+                        <div class="accessory-category category">
+                            <div class="accessory-category-header category-header">
+                                Danh mục phụ kiện
+                            </div>
+    
+                            <ul class="accessory-category-list category-list">
+                                <li class="accessory-category-item category-item">
+                                    <div class="accessory-img category-img">
+                                        <img src="./assets/images/accessory/sac du phong hydrus pa ck01.jpg" alt="Hydrus PA CK01">
+                                    </div>
+                                    <div class="accessory-name category-name">
+                                        Hydrus PA CK01
+                                    </div>
+                                    <div class="accessory-new-price category-new-price">
+                                        <span>220.000</span>đ
+                                    </div>
+                                    <div class="accessory-old-price category-old-price">
+                                       <span>490.000</span>đ
+                                    </div>
+                                </li>
+                                <li class="accessory-category-item category-item">
+                                    <div class="accessory-img category-img">
+                                        <img src="./assets/images/accessory/op lung iphone 13 pro max.jpg" alt="Ốp lưng iPhone 13 Pro Max">
+                                    </div>
+                                    <div class="accessory-name category-name">
+                                        Ốp lưng iPhone 13 Pro Max
+                                    </div>
+                                    <div class="accessory-new-price category-new-price">
+                                        <span>100.000</span>đ
+                                    </div>
+                                    <div class="accessory-old-price category-old-price">
+                                        <span>190.000</span>đ
+                                    </div>
+                                </li>
+                                <li class="accessory-category-item category-item">
+                                    <div class="accessory-img category-img">
+                                        <img src="./assets/images/accessory/sac ava+ tces1.jpg" alt="Xiaomi Redmi 10 (6GB/128GB)">
+                                    </div>
+                                    <div class="accessory-name category-name">
+                                        Sạc AVA+ TCES1
+                                    </div>
+                                    <div class="accessory-new-price category-new-price">
+                                        <span>150.000</span>đ
+                                    </div>
+                                    <div class="accessory-old-price category-old-price">
+                                        <span>200.000</span>đ
+                                    </div>
+                                </li>
+                                <li class="accessory-category-item category-item">
+                                    <div class="accessory-img category-img">
+                                        <img src="./assets/images/accessory/cap type c 20cm xmobile.jpg" alt="Cáp Type C 20cm Xmobile TC200B)">
+                                    </div>
+                                    <div class="accessory-name category-name">
+                                        Cáp Type C 20cm Xmobile TC200B
+                                    </div>
+                                    <div class="accessory-new-price category-new-price">
+                                        <span>90.000</span>đ
+                                    </div>
+                                    <div class="accessory-old-price category-old-price">
+                                        <span>190.000</span>đ
+                                    </div>
+                                </li>
+                                <li class="accessory-category-item category-item">
+                                    <div class="accessory-img category-img">
+                                        <img src="./assets/images/accessory/mieng dan iphone 12 pro max.jpg" alt="Miếng dán iPhone 12 Pro Max">
+                                    </div>
+                                    <div class="accessory-name category-name">
+                                        Miếng dán iPhone 12 Pro Max
+                                    </div>
+                                    <div class="accessory-new-price category-new-price">
+                                        <span>150.000</span>đ
+                                    </div>
+                                    <div class="accessory-old-price category-old-price">
+                                        <span>190.000</span>đ
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <!-- Special Page -->
+                        <div class="special-page">
+                            <div class="special-page__header">
+                                Chuyên trang sản phẩm
+                            </div>
+                            <a href="" class="special-page-samsung">
+                                <img src="./assets/images/mini-banner-4.png" alt="SamSung">
+                            </a>
+                            <a href="" class="special-page-apple">
+                                <img src="./assets/images/mini-banner-5.png" alt="Apple">
+                            </a>
+                            <a href="" class="special-page-laptop">
+                                <img src="./assets/images/mini-banner-6.png" alt="Laptop">
+                            </a>
+                        </div>
+    
+                        <!-- New products -->
+                        <div class="new-product">
+                            <div class="new-product__header">
+                                Sản phẩm mới
+                            </div>
+                            <div class="new-product-samsung">
+                                <div class="view-product-btn">
+                                    Xem
+                                </div>
+                            </div>
+                            <div class="new-product-samsung">
+                                <div class="view-product-btn">
+                                    Xem
+                                </div>
+                            </div>
+                            <div class="new-product-samsung">
+                                <div class="view-product-btn">
+                                    Xem
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Footer Banner -->
+                        <div class="footer-banner banner">
+                            <img class="footer-banner-img banner-img" src="./assets/images/footer-banner.jpg" alt="Footer Banner">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <footer id="footer">
+                <div class="grid">
+                    <div class="grid__row">
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Hỗ trợ khách hàng</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <a href="">Mua hàng trả góp</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Hướng dẫn mua hàng online</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Bảo hành mở rộng</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Chính sách bảo hành</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Chính sách đổi trả</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Quy định hình thức thanh toán</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Giới thiệu</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <a href="">Về Di Động TWin</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Tuyển dụng</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Khuyến mãi</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Liên hệ</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Hỏi đáp</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Tra cứu bảo hành</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Tổng đài hỗ trợ</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Tư vấn mua hàng (miễn phí):</span>
+                                    <span class="footer-list__item-phone-number">1800.6228</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Hỗ trợ kĩ thuật:</span>
+                                    <span class="footer-list__item-phone-number">1900.2044</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Khiếu nại - góp ý:</span>
+                                    <span class="footer-list__item-phone-number">1800.8098</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <div class="btn-up-to-header">
+                <a href="#header" class="btn-up-to-header-click">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+            </div>
+
+            <script src="./main.js"></script>
+        </div>
+        
+    </body>
