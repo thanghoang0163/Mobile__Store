@@ -1,5 +1,4 @@
 .mobile-store{
-  /* position: relative; */
 }
 
 /* Header */
@@ -183,6 +182,36 @@
 
 .header__cart:hover {
   background-color: rgb(33, 137, 206);
+}
+
+/* Header Login */
+.header__login {
+  display: flex;
+  margin: 0 1.3rem;
+  border: 0.1rem solid var(--white-color);
+  border-radius: 0.5rem;
+  color: var(--white-color);
+  width: 10.6rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.header__login:hover {
+  background-color: rgb(33, 137, 206);
+}
+
+.header__login-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.header__login-text {
+  padding-top: 0.3rem;
 }
 
 /* Body */

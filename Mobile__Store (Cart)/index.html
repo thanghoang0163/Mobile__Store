@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+        <title>Mobile Store</title>
+    </head>
+    <body>
+        <div class="mobile-store">
+            <header id="header">
+                <div class="grid header__grid">
+                    <!-- Header Logo -->
+                    <div class="header__logo">
+                        <a href="http://127.0.0.1:5502/index.html">
+                            <img class="header__logo-img" src="./assets/images/mobile__store.png" alt="Mobile Store">
+                        </a>
+                    </div>
+
+                    <!-- Header Call -->
+                    <div class="header__call">
+                        <div class="header__call-logo">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="header__call-info">
+                            <a href="#" class="header__call-info-phone-number">0123.456.789</a>
+                            <p class="header__call-info-text">Tổng đài tư vấn</p>
+                        </div>
+                    </div>
+
+                    <!-- Header Search -->
+                    <div class="header__search">
+                        <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                        <a href="" class="header__search-icon">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+
+                    <!-- Header Location -->
+                    <div class="header__location">
+                        <span class="header__location-text">Chọn khu vực</span>
+                        <div class="header__location-select">
+                            <a href="" class="header__location-select-primary">
+                                Hà Nội
+                            </a>
+                            <div class="header__location-icon">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                        <ul class="header__location-modal">
+                            <li class="header__location-modal-select">
+                                Hà Nội
+                            </li>
+                            <li class="header__location-modal-select">
+                                Hồ Chí Minh
+                            </li>
+                            <li class="header__location-modal-select">
+                                Đà Nẵng
+                            </li>
+                            <li class="header__location-modal-select">
+                                Cần Thơ
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Header Cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-icon">
+                            <i class="fas fa-cart-plus"></i>
+                        </div>
+                        <div class="header__cart-text">Giỏ hàng</div>
+                    </div>
+                </div>
+            </header>
+    
+            <div id="body">
+                    <div class="grid grid--padding">
+                        <!-- Mobile Page Header -->
+                            <div class="header-img">
+                                <img src="https://cdn.tgdd.vn/2021/12/banner/1200-44-1200x44-2.png" alt="header image">
+                            </div>
+                        
+                       <!-- Cart -->
+                       <div class="cart">
+                           <div class="cart-body">
+                               <div class="cart-body__header">
+                                    <a href="http://127.0.0.1:5501/index.html" class="continue-buying">
+                                        <i class="fas fa-chevron-left"></i>
+                                        <span>Tiếp tục mua sản phẩm khác</span>
+                                   </a>
+                                   <div class="your_cart">
+                                       GIỎ HÀNG CỦA BẠN
+                                   </div>
+                               </div>
+
+                               <div class="selected-product">
+                                   <ul class="selected-product__list">
+                                       <li class="selected-product__item">
+                                           <div class="selected-product__img-and-delete">
+                                               <img src="https://www.xtmobile.vn/vnt_upload/product/Hinh_DT/SamSung/s10/thumbs/(200x200)_crop_s10_green_800x800-min.jpg" alt="">
+                                               <div class="deletes-product">
+                                                   Xóa sản phẩm
+                                               </div>
+                                           </div>
+
+                                           <div class="selected-product__name-and-price-and-color-and-quantity">
+                                               <div class="selected-product__name">
+                                                Galaxy S10 (8GB|128GB) Hàn Quốc SM-G973N (Cũ 99%)
+                                               </div>
+                                               <div class="selected-product__price">5.390.000 đ</div>
+                                               <div class="selected-product__color">
+                                                   <span>Màu: </span>
+                                                   
+                                               </div>
+                                           </div>
+
+                                           <div class="selected-product__quantity">
+                                            <div class="decreases-quantity">-</div>
+                                            <div class="quantity">1</div>
+                                            <div class="increases-quantity">+</div>
+                                        </div>
+                                       </li>
+                                   </ul>
+                               </div>
+
+                                <!-- Total -->
+                                <div class="total">
+                                    <span>Tổng tiền</span>
+                                    <span class="total-price">5.390.000 đ</span>
+                                </div>
+
+                                <!-- Infor of Customer to delivery -->
+                                <div class="infor-to-delivery">
+                                    <div class="infor-to-delivery-title">THÔNG TIN KHÁCH HÀNG</div>
+                                    <input class="textbox-name textbox-100 textbox" type="text" placeholder="Họ tên" value required>
+                                    <div class="textbox__email-and-name">
+                                        <input class="textbox-email textbox-50 textbox" type="text" placeholder="Email" value required>
+                                        <input class="textbox-phone texbox-50 textbox" type="text" placeholder="Số điện thoại" value required>
+                                    </div>
+                                </div>   
+                                
+                                <!-- Method of receiving goods -->
+                               <div class="method-of-receiving">
+                                <div class="infor-to-delivery-title">PHƯƠNG THỨC NHẬN HÀNG</div>
+                                <div class="checkbox-delivery">
+                                    <label for="" class="delivery-address">
+                                        <input type="radio" checked name="where_get" class="delivery-label">
+                                        <span>Địa chỉ giao hàng</span>
+                                    </label>
+
+                                    <label for="" class="pick-up-at-the-store">
+                                        <input type="radio" name="where_get" class="pick-label">
+                                        <span>Nhận tại cửa hàng</span>
+                                    </label>
+
+                                    <div class="fill-to-delivery">
+                                        <div class="address">
+                                            <select name="" class="select-city textbox-50 textbox">
+                                                <option value="hcm">Hồ Chí Minh</option>
+                                                <option value="hn">Hà Nội</option>
+                                            </select>
+                                            <select name="" class="select-district textbox-50 textbox">
+                                                <option value="q1">Quận 1</option>
+                                                <option value="q2">Quận 2</option>
+                                                <option value="q3">Quận 3</option>
+                                                <option value="q4">Quận 4</option>
+                                                <option value="q5">Quận 5</option>
+                                                <option value="q6">Quận 6</option>
+                                                <option value="q7">Quận 7</option>
+                                                <option value="q8">Quận 8</option>
+                                                <option value="q10">Quận 10</option>
+                                                <option value="q11">Quận 11</option>
+                                                <option value="q12">Quận 12</option>
+                                                <option value="qbinhtan">Quận Bình Tân</option>
+                                                <option value="qbinhthanh">Quận Bình Thạnh</option>
+                                                <option value="qgovap">Quận Gò Vấp</option>
+                                                <option value="qphunhuan">Quận Phú Nhuận</option>
+                                                <option value="qtanbinh">Quận Tân Bình</option>
+                                                <option value="qtanphu">Quận Tân Phú</option>
+                                                <option value="tpthuduc">TP Thủ Đức</option>
+                                                <option value="binhchanh">Huyện Bình Chánh</option>
+                                                <option value="nhabe">Huyện Nhà Bè</option>
+                                                <option value="hocmon">Huyện Hóc Môn</option>
+                                                <option value="cangio">Huyện Cần Giờ</option>
+                                                <option value="cuchi">Huyện Củ Chi</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" placeholder="Số nhà, tên đường, phường/ xã" class="fill-address textbox-100 textbox">
+                                        <textarea name="notice" class="notice" cols="30" rows="10" placeholder="Ghi Chú"></textarea>
+                                    </div>
+
+                                    <!-- Buying Button -->
+                                    <button class="click-buy">ĐẶT HÀNG</button>
+                                </div>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer id="footer">
+                <div class="grid">
+                    <div class="grid__row">
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Hỗ trợ khách hàng</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <a href="">Mua hàng trả góp</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Hướng dẫn mua hàng online</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Bảo hành mở rộng</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Chính sách bảo hành</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Chính sách đổi trả</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Quy định hình thức thanh toán</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Giới thiệu</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <a href="">Về Di Động TWin</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Tuyển dụng</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Khuyến mãi</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Liên hệ</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Hỏi đáp</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="">Tra cứu bảo hành</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid__column-footer">
+                            <h2 class="footer-heading">Tổng đài hỗ trợ</h2>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Tư vấn mua hàng (miễn phí):</span>
+                                    <span class="footer-list__item-phone-number">1800.6228</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Hỗ trợ kĩ thuật:</span>
+                                    <span class="footer-list__item-phone-number">1900.2044</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                                <li class="footer-list__item">
+                                    <span class="footer-list__item-text">Khiếu nại - góp ý:</span>
+                                    <span class="footer-list__item-phone-number">1800.8098</span>
+                                    <span class="footer-list__item-time">(8h - 20h)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <div class="btn-up-to-header">
+                <a href="#header" class="btn-up-to-header-click">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+            </div>
+
+            <script src="./main.js"></script>
+        </div>
+        
+    </body>

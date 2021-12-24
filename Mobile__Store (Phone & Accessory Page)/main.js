@@ -25,6 +25,8 @@ function getMobile(callback) {
 function renderMobile(mobiles) {
     var phoneMobileBtn = $('.mobile-page-btn');
     var getBrandMobileBtn = $$('.brand-btn');
+    var accessoryBtn = $('.accessory-page-btn');
+    var headerCart = $('.header__cart');
 
     // Select Brand Button
     // function selectBrandBorder() {
@@ -46,6 +48,7 @@ function renderMobile(mobiles) {
     phoneMobileBtn.onclick = function() {
         $('.brand-btn.bordered').classList.remove('bordered');
         getBrandMobileBtn[0].classList.add('bordered');
+        $('.brand-of-accessory').style.display = null;
         return listMobile(mobiles);
         
     }
@@ -126,6 +129,60 @@ function renderMobile(mobiles) {
         getBrandMobileBtn[9].classList.add('bordered');
         return brandMobile(mobiles, "nokia");
     }
+
+    // Button Phone Page
+    phoneMobileBtn.onclick = function() {
+        $('.brand-btn.bordered').classList.remove('bordered');
+        getBrandMobileBtn[0].classList.add('bordered');
+        return listMobile(mobiles);
+        
+    }
+
+
+    // Button Accessory Page
+    accessoryBtn.onclick = function() {
+        $('.brand-btn.bordered').classList.remove('bordered');
+        getBrandMobileBtn[10].classList.add('bordered');
+        $('.brand-of-accessory').style.display = "flex";
+        return listAccessory(mobiles);
+    }
+
+    // Get All Accessory Button
+    getBrandMobileBtn[10].onclick = function() {
+        $('.brand-btn.bordered').classList.remove('bordered');
+        getBrandMobileBtn[10].classList.add('bordered');
+        return listAccessory(mobiles);
+    };
+
+    // Case
+    getBrandMobileBtn[11].onclick = function() {
+        $('.brand-btn.bordered').classList.remove('bordered');
+        getBrandMobileBtn[11].classList.add('bordered');
+        return brandMobile(mobiles, "case");
+    }
+
+    // Backup Charger
+    getBrandMobileBtn[12].onclick = function() {
+        $('.brand-btn.bordered').classList.remove('bordered');
+        getBrandMobileBtn[12].classList.add('bordered');
+        return brandMobile(mobiles, "backup charger");
+    }
+
+    // Adapter
+    getBrandMobileBtn[13].onclick = function() {
+        $('.brand-btn.bordered').classList.remove('bordered');
+        getBrandMobileBtn[13].classList.add('bordered');
+        return brandMobile(mobiles, "adapter");
+    }
+
+    // Charging Cable
+    getBrandMobileBtn[14].onclick = function() {
+        $('.brand-btn.bordered').classList.remove('bordered');
+        getBrandMobileBtn[14].classList.add('bordered');
+        return brandMobile(mobiles, "Charging Cable");
+    }
+
+
 }
 
 
@@ -141,7 +198,7 @@ function listMobile(mobiles) {
 
     var mobileList = filterMobileList.map(function(mobile) {
         var doubleId = mobile.id * 2;
-        var discount = mobile.marketPrice / mobile.price;
+        var discount = 100 - ((mobile.price / mobile.marketPrice) * 100);
         var price = formatNumber(mobile.price);
         var marketPrice = formatNumber(mobile.marketPrice);
         var specsMobile = mobile.specifications;
@@ -188,6 +245,7 @@ function listMobile(mobiles) {
             <div class="mobile-item__sale-off">
                 Giảm <span>${discount.toFixed()}%</span>
             </div>
+            <div class="mobile-item__installment">Trả góp 0%</div>
             <div class="add-to-cart">
                 <button class="add-to-cart-btn">Thêm vào giỏ hàng</button>
             </div>
@@ -200,7 +258,7 @@ function listMobile(mobiles) {
 }
 
 
-// Brand of Phone List
+// Brand of Phone & Accessory List
 function brandMobile(mobiles, brand) {
     var mobileListPage = $('.mobile-list');
 
@@ -211,7 +269,7 @@ function brandMobile(mobiles, brand) {
     // console.log(filterMobileList)
     var mobileList = filterMobileList.map(function(mobile) {
         var doubleId = mobile.id * 2;
-        var discount = mobile.marketPrice / mobile.price;
+        var discount = 100 - ((mobile.price / mobile.marketPrice) * 100);
         var price = formatNumber(mobile.price);
         var marketPrice = formatNumber(mobile.marketPrice);
         var specsMobile = mobile.specifications;
@@ -258,6 +316,10 @@ function brandMobile(mobiles, brand) {
                 <div class="mobile-item__sale-off">
                     Giảm <span>${discount.toFixed()}%</span>
                 </div>
+                <div class="mobile-item__installment">Trả góp 0%</div>
+                <div class="add-to-cart">
+                <button class="add-to-cart-btn">Thêm vào giỏ hàng</button>
+            </div>
             </li>
         `
     })
@@ -265,6 +327,66 @@ function brandMobile(mobiles, brand) {
     mobileListPage.innerHTML = mobileList.join('');
 }
 
+
+// Accessory List Page
+function listAccessory(mobiles) {
+    var mobileListPage = $('.mobile-list');
+    
+    var filterMobileList = mobiles.filter(function(mobile) {
+        return mobile.brand == "backup charger" || mobile.brand == "adapter" || mobile.brand == "Charging Cable" 
+        || mobile.brand == "case";
+    })
+
+    var mobileList = filterMobileList.map(function(mobile) {
+        var doubleId = mobile.id * 2;
+        var discount = 100 - ((mobile.price / mobile.marketPrice) * 100);
+        var price = formatNumber(mobile.price);
+        var marketPrice = formatNumber(mobile.marketPrice);
+        var specsMobile = mobile.specifications;
+        var memoryMobile = mobile.memories;
+        
+        var specs = specsMobile.filter(function(specs) {
+            return specs.id == doubleId;
+        })
+
+        var getSpecs = specs.map(function(specs) {
+            return specs.value;
+        })
+        
+        return `
+        <li class="mobile-item">
+            <div class="mobile-item-img">
+                <img src="${mobile.thumbnail}">
+            </div>
+            <div class="mobile-item-name">
+                <span>${mobile.name}</span>
+            </div>
+            <div class="mobile-item-specs">
+                <div class="mobile-item-specs__screen-size">${getSpecs}</div>    
+            </div>
+            <div class="mobile-item-price">
+                <div class="mobile-item-new-price">
+                    <span>${price}</span> đ
+                </div>
+                <div class="mobile-item-old-price">
+                    <span>${marketPrice}</span> đ
+                </div>
+            </div>
+        
+            <div class="mobile-item__sale-off">
+                Giảm <span>${discount.toFixed()}%</span>
+            </div>
+            <div class="mobile-item__installment">Trả góp 0%</div>
+            <div class="add-to-cart">
+                <button class="add-to-cart-btn">Thêm vào giỏ hàng</button>
+            </div>
+        </li>
+        `
+    })
+    
+    mobileListPage.innerHTML = mobileList.join('');
+
+}
 
 // Number formatting
 function formatNumber(num) {
