@@ -184,6 +184,7 @@ function renderMobile(mobiles) {
 
     // Cart
     var btnAddtoCart = $$('.add-to-cart-btn');
+    // console.log(btnAddtoCart);
     var amountCart = $('.header__cart-amount');
     var count = 0;
     for(var i = 0; i < btnAddtoCart.length; i++) {
