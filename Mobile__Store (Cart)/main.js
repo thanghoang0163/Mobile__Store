@@ -103,6 +103,9 @@ function renderMobile(mobiles) {
 
     clickBuy.onclick = function() {
         modalCart.classList.add('open');
+        buyingListPage.style.display = 'none';
+        count = 0;
+        $('.total-price').innerHTML = `${formatNumber(count)} đ`;
     }
 
     modalCart.addEventListener('click', function() {
