@@ -198,6 +198,10 @@ html {
 
 
 /* Select Product */
+.buying-list {
+  padding-left: 0;
+}
+
 .selected-product__list {
   list-style: none;
   padding-left: 0;
