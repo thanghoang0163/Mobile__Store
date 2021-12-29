@@ -7,23 +7,51 @@ body {
   overflow: hidden;
 }
 
-.center {
-  position: absolute;
+
+.login-and-register {
+  overflow: hidden;
+  width: 40rem;
+  height: 47rem;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.login-and-register-form {
+  display: flex;
+  width: 80rem;
+  height: 47rem;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Login */
+.login {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 40rem;
+  height: 100%;
   background-color: white;
   border-radius: 1rem;
 }
 
-.center h1 {
+.header {
   text-align: center;
-  padding: 0 0 2rem 0;
+  padding: 1rem 0 0 0;
   border-bottom: 0.1rem solid silver;
+  width: 100%;
+  height: 6rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  background-image: linear-gradient(to top, rgb(27, 184, 27), #7fbee7);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
-.center form {
+.login form {
   padding: 0 4rem 0;
   box-sizing: border-box;
 }
@@ -88,7 +116,7 @@ form .txt_field {
   text-decoration: underline;
 }
 
-input[type="submit"] {
+.login-btn1 {
   width: 100%;
   height: 5rem;
   border: 0.1rem solid var(--white-color);
@@ -99,14 +127,16 @@ input[type="submit"] {
   outline: none;
   border-radius: 2.5rem;
   font-size: 1.8rem;
+  text-align: center;
+  margin: 1rem 0;
 }
 
-input[type="submit"]:hover {
+.login-btn1:hover {
   border-color: #2691d9;
   transition: 0.5s;
 }
 
-.signup_link {
+.signup-btn1 {
   width: 100%;
   height: 5rem;
   border: 0.1rem solid var(--white-color);
@@ -117,13 +147,92 @@ input[type="submit"]:hover {
   outline: none;
   border-radius: 2.5rem;
   font-size: 1.8rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.signup-btn1:hover {
+  border-color: #da9944;
+  transition: 0.5s;
+}
+
+/* Register */
+.register {
+  position: absolute;
+  top: 0;
+  left: 40rem;
+  /* transform: translate(-50%, -50%); */
+  width: 40rem;
+  height: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  /* transition: 0.5s; */
+}
+
+.register h1 {
+  text-align: center;
+  padding: 0 0 2rem 0;
+  border-bottom: 0.1rem solid silver;
+}
+
+.register form {
+  padding: 0 4rem 0;
+  box-sizing: border-box;
+}
+
+.first-and-last-name {
   display: flex;
-  margin: 1rem 0 3rem ;
 }
 
-.signup_link a{
-  color: var(--white-color);
-  text-decoration: none;
-  margin: auto;
+.first-and-last-name .txt_field:first-child {
+  margin-right: 3rem;
+  width: 50%;
 }
 
+.first-and-last-name .txt_field:last-child {
+  width: 50%;
+}
+
+.txt_field.name {
+  margin-top: 0;
+}
+
+.login-btn2 {
+  width: 100%;
+  height: 5rem;
+  border: 0.1rem solid var(--white-color);
+  background: #2691d9;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1rem 0;
+  padding-top: 1rem;
+}
+
+.login-btn2:hover {
+  border-color: #2691d9;
+  transition: 0.5s;
+}
+
+.signup-btn2 {
+  width: 100%;
+  height: 5rem;
+  border: 0.1rem solid var(--white-color);
+  background: #da9944;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.signup-btn2:hover {
+  border-color: #da9944;
+  transition: 0.5s;
+}

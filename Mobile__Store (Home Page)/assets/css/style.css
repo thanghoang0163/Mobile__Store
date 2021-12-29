@@ -160,7 +160,7 @@
 }
 
 /* Header Cart */
-.header__cart {
+.header__cart a{
   display: flex;
   margin: 0 1.3rem;
   border: 0.1rem solid var(--white-color);
@@ -173,6 +173,7 @@
   justify-content: center;
   font-size: 1.3rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .header__cart-icon {
@@ -185,7 +186,7 @@
 }
 
 /* Header Login */
-.header__login {
+.header__login a{
   display: flex;
   margin: 0 1.3rem;
   border: 0.1rem solid var(--white-color);
@@ -199,6 +200,7 @@
   font-size: 1.3rem;
   cursor: pointer;
   padding: 0.5rem;
+  text-decoration: none;
 }
 
 .header__login:hover {

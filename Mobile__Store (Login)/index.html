@@ -14,24 +14,60 @@
         <title>Mobile Store</title>
     </head>
     <body>
-        <div class="center">
-            <h1>Login</h1>
-        <form method="post">
-            <div class="txt_field">
-                <input type="text" required>
-                <span></span>
-                <label for="">Tên đăng nhập</label>
+        <div class="login-and-register">
+            <div class="login-and-register-form">
+                <!-- Login -->
+            <div class="login">
+                <div class="header">Login</div>
+            <form method="post">
+                <div class="txt_field">
+                    <input type="text" required>
+                    <!-- <span></span> -->
+                    <label for="">Email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" required>
+                    <label for="">Mật khẩu</label>
+                    <span></span>
+                </div>
+                <div class="pass">Quên mật khẩu?</div>
+                <button class="login-btn1">Đăng nhập</button>
+                <div class="signup-btn1" onclick="register()">Đăng kí</div>
+            </form>
             </div>
-            <div class="txt_field">
-                <input type="password" required>
-                <span></span>
-                <label for="">Mật khẩu</label>
+    
+            <!-- Register -->
+            <div class="register">
+                <div class="header">Register</div>
+            <form method="post">
+                <div class="first-and-last-name">
+                    <div class="txt_field">
+                        <input class="last-name" type="text" required>
+                        <span></span>
+                        <label for="">Họ</label>
+                    </div>
+                    <div class="txt_field">
+                        <input class="first-name" type="text" required>
+                        <span class="register__span"></span>
+                        <label for="">Tên</label>
+                    </div>
+                </div>
+                <div class="txt_field name">
+                    <input class="email" type="text" required>
+                    <!-- <span></span> -->
+                    <label for="">Email</label>
+                </div>
+                <div class="txt_field">
+                    <input class="password" type="password" required>
+                    <label for="">Mật khẩu</label>
+                    <span></span>
+                </div>
+                <button class="signup-btn2">Đăng kí</button>
+                <div class="login-btn2" onclick="login()">Đăng nhập</div>
+            </form>
             </div>
-            <div class="pass">Quên mật khẩu?</div>
-            <input type="submit" value="Đăng nhập">
-            <div class="signup_link">
-                <a href="#">Đăng kí</a>
             </div>
-        </form>
         </div>
+
+        <script src="./main.js"></script>
     </body>

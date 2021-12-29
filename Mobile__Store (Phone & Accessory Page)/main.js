@@ -39,7 +39,7 @@ function renderMobile(mobiles) {
     //     })
     // }
 
-        
+
     // Get All Phone
     listMobile(mobiles);
 
@@ -182,6 +182,22 @@ function renderMobile(mobiles) {
         return brandMobile(mobiles, "Charging Cable");
     }
 
+    // Cart
+    var btnAddtoCart = $$('.add-to-cart-btn');
+    var amountCart = $('.header__cart-amount');
+    var count = 0;
+    for(var i = 0; i < btnAddtoCart.length; i++) {
+        btnAddtoCart[i].onclick = function() {
+        amountCart.style.display = 'block';
+        count++;
+        amountCart.innerHTML = `${count}`;
+        }
+    }
+
+    var headerCart = $('.header__cart');
+    headerCart.onclick = function() {
+        
+    }
 
 }
 
