@@ -167,6 +167,7 @@ html {
   background-color: #fff;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .cart-body {
@@ -212,6 +213,7 @@ html {
   margin: 3rem 0;
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 .selected-product__img-and-delete img {
@@ -250,6 +252,9 @@ html {
 .selected-product__quantity {
   display: flex;
   margin-top: 10rem;
+  position: absolute;
+  bottom: 0;
+  right: 4rem;
 }
 
 .decreases-quantity, 
@@ -291,7 +296,7 @@ html {
 }
 
 .total-price {
-  color: var(--primary-color);
+  color: rgb(252, 56, 56);
 }
 
 /* Infor to delivery */
@@ -404,6 +409,48 @@ html {
   height: 5rem;
 }
 
+/* Modal Cart */
+.modal-cart {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: none;
+}
+
+.buying-successful {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  background-image: linear-gradient(to top, #a5cfeb, #7fbee7);
+  top: 35%;
+  left: 35%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 1rem;
+  animation: modalFadeIn linear 0.2s;
+}
+
+.buying-successful i{
+ font-size: 10rem;
+ color: green;
+ margin: auto;
+}
+
+.modal-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  padding-bottom: 6rem;
+}
+
+.open {
+  display: flex;
+}
+
 /* Amination */
 @keyframes fadeIn {
   from {
@@ -421,5 +468,16 @@ html {
   }
   to {
     transform: scale(var(--growth-to));
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform:translateY(0);
   }
 }

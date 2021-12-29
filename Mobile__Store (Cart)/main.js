@@ -4,7 +4,7 @@ var $$ = document.querySelectorAll.bind(document);
 var pickupAtTheStore = $('.pick-label');
 
 // Fetch HomePage Mobile 
-var buyingAPI = 'http://localhost:3000/cart/1'
+var mobileAPI = 'http://localhost:3000/cart/1'
 
 function start() {
     getMobile(renderMobile);
@@ -15,7 +15,7 @@ start();
 
 //Get All Products
 function getMobile(callback) {
-    fetch(buyingAPI)
+    fetch(mobileAPI)
     .then(function(response) {
         return response.json();
     })
@@ -26,10 +26,17 @@ function getMobile(callback) {
 // Render 
 function renderMobile(mobiles) {
     var buyingListPage = $('.selected-product__list');
+    var count = 0;
 
     var getCartItems = mobiles.cartItems;
 
-    var buyingList = getCartItems.map(function(item) {
+    var getProduct = getCartItems.map(function(item) {
+        return item.product;
+    })
+
+    var buyingList = getProduct.map(function(item) {
+        count += item.price;
+
         return `
         <li class="selected-product__item">
         <div class="selected-product__img-and-delete">
@@ -43,9 +50,9 @@ function renderMobile(mobiles) {
             <div class="selected-product__name">
              ${item.name}
             </div>
-            <div class="selected-product__price">${item.price} đ</div>
+            <div class="selected-product__price">${formatNumber(item.price)} đ</div>
             <div class="selected-product__color">
-                <span>Màu: </span>
+
                 
             </div>
         </div>
@@ -57,9 +64,12 @@ function renderMobile(mobiles) {
      </div>
     </li>
         `
-    });
+    })
 
     buyingListPage.innerHTML = buyingList.join('');
+
+    // Total
+    $('.total-price').innerHTML = `${formatNumber(count)} đ`;
 
     // increases and decreases quantity
     var increaseQuantity = $('.increases-quantity');
@@ -80,6 +90,24 @@ function renderMobile(mobiles) {
             quantity.innerHTML = `${count}`;
         }
     }
+
+    var pickupAtTheStore = $('.pick-label');
+    if(pickupAtTheStore.checked == true) {
+        $('.fill-to-delivery').style.display = 'none';
+        // console.log(abc)
+    }
+
+    // Click Buy
+    var modalCart = $('.modal-cart');
+    var clickBuy = $('.click-buy');
+
+    clickBuy.onclick = function() {
+        modalCart.classList.add('open');
+    }
+
+    modalCart.addEventListener('click', function() {
+        modalCart.classList.remove('open');
+    })
 }
 
 
