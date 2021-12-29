@@ -41,11 +41,20 @@ function createUser(data, callback) {
           },
           body: JSON.stringify(data)
     };
-    fetch(userAPI, options)
+    fetch("http://localhost:3000/user/register", options)
     .then(function(response) {
-        response.json();
+        return response.json();
     })
-    .then(callback);
+    .then(function(response) {
+        if(response.statusCode === 400){
+            alert('Email đã tồn tại');
+            return;
+        }
+        window.location.href= 'http://127.0.0.1:5502/index.html';
+    })
+    .catch(function(error) {
+        alert('Tạo tài khoản thất bại, vui lòng thử lại');
+    });
 }
 
 function authUser(data, callback){
@@ -65,7 +74,7 @@ function authUser(data, callback){
         window.location.href= 'http://127.0.0.1:5502/index.html';
     })
     .catch(function(error) {
-
+        alert('Sai email hoặc mật khẩu');
     });
 }
 
@@ -88,17 +97,19 @@ function handleLoginUser() {
 }
 
 function handleCreateUser() {
-    btnRegister.onclick = function() {
-        var lastName = $('.last-name');
-        var firstName = $('.first-name');
-        var email = $('.email');
-        var password = $('.password');
+    formRegister.onsubmit = function(e) {
+        e.preventDefault();
+        var lastName = $('.last-name').value;
+        var firstName = $('.first-name').value;
+        var email = $('.email').value;
+        var password = $('.password').value;
 
         var formData = {
             firstName: firstName,
             lastName: lastName,
             email: email,
-            password: password
+            password: password,
+            registerDate: "12-12-2021"
         }
 
         createUser(formData);
