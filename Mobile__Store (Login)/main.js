@@ -3,8 +3,11 @@ var $$ = document.querySelectorAll.bind(document);
 
 var btnLogin = $('.login-btn1');
 var btnRegister = $('.signup-btn2');
+
 var formLoginAndRegister = $('.login-and-register-form');
 var password = $('input[type="password"]');
+var formLogin = $('#form-login');
+var formRegister = $('#form-register');
 
 function register() {
     formLoginAndRegister.style = `transform: translateX(-400px)`;
@@ -19,7 +22,7 @@ var userAPI = 'http://localhost:3000/user/register'
 // Start
 function start() {
     getMobile(renderMobile);
-
+    handleLoginUser();
     handleCreateUser();
 }
 
@@ -27,11 +30,7 @@ start();
 
 //Get All Products
 function getMobile(callback) {
-    fetch(userAPI)
-    .then(function(response) {
-        return response.json();
-    })
-    .then(callback);
+
 }
 
 function createUser(data, callback) {
@@ -39,7 +38,6 @@ function createUser(data, callback) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
           },
           body: JSON.stringify(data)
     };
@@ -50,9 +48,43 @@ function createUser(data, callback) {
     .then(callback);
 }
 
+function authUser(data, callback){
+    var options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+    };
+    fetch("http://localhost:3000/auth/login", options)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(response) {
+        document.cookie = `token=${response.access_token}`;
+        window.location.href= 'http://127.0.0.1:5502/index.html';
+    })
+    .catch(function(error) {
+
+    });
+}
+
 // Render 
 function renderMobile(mobiles) {
 
+}
+
+function handleLoginUser() {
+    formLogin.onsubmit = function(e) {
+        e.preventDefault();
+        var email = $('.login-email').value;
+        var password = $('.login-password').value;
+        var formData = {
+            email: email,
+            password: password
+        }
+        authUser(formData);
+    }
 }
 
 function handleCreateUser() {
