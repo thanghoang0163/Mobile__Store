@@ -348,18 +348,13 @@ position: relative;
 }
 
 .brand-of-phone {
-  display: flex;
+  display: none;
   justify-content: center;
-  /* display: none; */
 }
 
 .brand-of-accessory {
   display: none;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  background-color: #f3f3f3;
-  width: 100%;
 }
 
 .brand-btn {
@@ -383,6 +378,10 @@ position: relative;
   width: 90%;
   height: 100%;
   
+}
+
+.open {
+  display: flex;
 }
 
 /* Mobile List */

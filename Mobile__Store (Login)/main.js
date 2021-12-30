@@ -14,7 +14,7 @@ function register() {
 }
 
 function login() {
-    formLoginAndRegister.style = `transform: translateX(0px)`;
+    formLoginAndRegister.style = `transform: translateX(0)`;
 }
 
 var userAPI = 'http://localhost:3000/user/register'
@@ -47,10 +47,9 @@ function createUser(data, callback) {
     })
     .then(function(response) {
         if(response.statusCode === 400){
-            alert('Email đã tồn tại');
+            alert('Email đã tồn tại!');
             return;
         }
-        window.location.href= 'http://127.0.0.1:5502/index.html';
     })
     .catch(function(error) {
         alert('Tạo tài khoản thất bại, vui lòng thử lại');

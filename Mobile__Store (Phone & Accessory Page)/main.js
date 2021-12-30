@@ -48,7 +48,8 @@ function renderMobile(mobiles) {
     phoneMobileBtn.onclick = function() {
         $('.brand-btn.bordered').classList.remove('bordered');
         getBrandMobileBtn[0].classList.add('bordered');
-        $('.brand-of-accessory').style.display = null;
+        $('.brand-of-accessory').classList.remove('open');
+        $('.brand-of-phone').classList.add('open');
         return listMobile(mobiles);
         
     }
@@ -130,20 +131,13 @@ function renderMobile(mobiles) {
         return brandMobile(mobiles, "nokia");
     }
 
-    // Button Phone Page
-    phoneMobileBtn.onclick = function() {
-        $('.brand-btn.bordered').classList.remove('bordered');
-        getBrandMobileBtn[0].classList.add('bordered');
-        return listMobile(mobiles);
-        
-    }
-
 
     // Button Accessory Page
     accessoryBtn.onclick = function() {
         $('.brand-btn.bordered').classList.remove('bordered');
         getBrandMobileBtn[10].classList.add('bordered');
-        $('.brand-of-accessory').style.display = "flex";
+        $('.brand-of-phone').classList.remove('open');
+        $('.brand-of-accessory').classList.add('open');
         return listAccessory(mobiles);
     }
 
